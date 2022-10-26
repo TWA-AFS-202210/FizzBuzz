@@ -131,7 +131,5 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("Fizz", countOffReturnResult);
         }
-
-        // feat: implement code logic and test for FizzBuzz rule
     }
 }
