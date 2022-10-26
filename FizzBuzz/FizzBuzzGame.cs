@@ -4,7 +4,11 @@
   {
     public string CountOff(int number)
     {
-      if (number % 3 == 0)
+      if (number.ToString().Contains('3'))
+      {
+        return "Fizz";
+      }
+      else if (number % 3 == 0)
       {
         if (number % 5 == 0)
         {
