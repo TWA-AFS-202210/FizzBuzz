@@ -15,6 +15,7 @@ namespace FizzBuzzTest
 
             //when
             string countOffReturnResult = fizzBuzzGame.CountOff(inputNumber);
+
             //then
             Assert.Equal("1", countOffReturnResult);
         }
@@ -28,8 +29,23 @@ namespace FizzBuzzTest
 
             //when
             string countOffReturnResult = fizzBuzzGame.CountOff(inputNumber);
+
             //then
             Assert.Equal("Fizz", countOffReturnResult);
+        }
+
+        [Fact]
+        public void Should_return_Buzz_When_call_countOff_Given_number_can_divided_by_5()
+        {
+            //given
+            FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+            int inputNumber = 5;
+
+            //when
+            string countOffReturnResult = fizzBuzzGame.CountOff(inputNumber);
+
+            //then
+            Assert.Equal("Buzz", countOffReturnResult);
         }
     }
 }
