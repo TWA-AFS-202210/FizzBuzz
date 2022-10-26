@@ -10,6 +10,10 @@
         {
           return "FizzBuzz";
         }
+        else if (number % 7 == 0)
+        {
+          return "FizzWhizz";
+        }
         else
         {
           return "Fizz";
