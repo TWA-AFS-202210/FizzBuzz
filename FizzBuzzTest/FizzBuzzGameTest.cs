@@ -47,5 +47,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("Buzz", countOffReturnResult);
         }
+
+        [Fact]
+        public void Should_return_Whizz_When_call_countOff_Given_number_can_divided_by_7()
+        {
+            //given
+            FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+            int inputNumber = 7;
+
+            //when
+            string countOffReturnResult = fizzBuzzGame.CountOff(inputNumber);
+
+            //then
+            Assert.Equal("Whizz", countOffReturnResult);
+        }
     }
 }

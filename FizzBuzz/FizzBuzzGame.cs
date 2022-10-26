@@ -4,15 +4,22 @@ namespace FizzBuzz
 {
     public class FizzBuzzGame
     {
+        private string fizz = "Fizz";
+        private string buzz = "Buzz";
+        private string whizz = "Whizz";
         public string CountOff(int number)
         {
             if (number % 3 == 0)
             {
-                return "Fizz";
+                return fizz;
             }
             else if (number % 5 == 0)
             {
-                return "Buzz";
+                return buzz;
+            }
+            else if (number % 7 == 0)
+            {
+                return whizz;
             }
 
             return number.ToString();
