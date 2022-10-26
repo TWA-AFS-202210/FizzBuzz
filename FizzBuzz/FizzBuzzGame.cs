@@ -8,7 +8,14 @@
       {
         if (number % 5 == 0)
         {
-          return "FizzBuzz";
+          if (number % 7 == 0)
+          {
+            return "FizzBuzzWhizz";
+          }
+          else
+          {
+            return "FizzBuzz";
+          }
         }
         else if (number % 7 == 0)
         {
