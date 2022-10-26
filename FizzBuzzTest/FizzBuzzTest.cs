@@ -18,5 +18,17 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("1", res);
         }
+
+        [Fact]
+        public void Should_return_fizz_when_call_countoff_given_multiple_of_three()
+        {
+            //given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            //when
+            var res = fizzBuzz.CountOff(3);
+
+            //then
+            Assert.Equal("Fizz", res);
+        }
     }
 }
