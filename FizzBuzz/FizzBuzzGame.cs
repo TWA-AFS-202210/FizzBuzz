@@ -33,6 +33,10 @@ namespace FizzBuzz
             {
                 return buzz + whizz;
             }
+            else if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0)
+            {
+                return fizz + buzz + whizz;
+            }
 
             return number.ToString();
         }
