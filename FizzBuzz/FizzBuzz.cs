@@ -6,22 +6,33 @@ namespace FizzBuzz
     {
         public string GetString(int number)
         {
+            string result = string.Empty;
+            bool flag = false;
+
             if (number % 3 == 0)
             {
-                return "Fizz";
+                result += "Fizz";
+                flag = true;
             }
-            else if (number % 5 == 0)
+
+            if (number % 5 == 0)
             {
-                return "Buzz";
+                result += "Buzz";
+                flag = true;
             }
-            else if (number % 7 == 0)
+
+            if (number % 7 == 0)
             {
-                return "Whizz";
+                result += "Whizz";
+                flag = true;
             }
-            else
+
+            if (!flag)
             {
-                return number.ToString();
+                result = number.ToString();
             }
+
+            return result;
         }
     }
 }

@@ -42,7 +42,6 @@ namespace FizzBuzzTest
             Assert.Equal("Buzz", result);
         }
 
-
         [Fact]
         public void Should_return_Fizz_when_number_multiple_of_7()
         {
@@ -53,6 +52,54 @@ namespace FizzBuzzTest
             string result = class1.GetString(i);
             //then
             Assert.Equal("Whizz", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_number_multiple_of_3_and_5()
+        {
+            //given
+            FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
+            int i = 15;
+            //when
+            string result = class1.GetString(i);
+            //then
+            Assert.Equal("FizzBuzz", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_number_multiple_of_5_and_7()
+        {
+            //given
+            FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
+            int i = 35;
+            //when
+            string result = class1.GetString(i);
+            //then
+            Assert.Equal("BuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_number_multiple_of_3_and_7()
+        {
+            //given
+            FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
+            int i = 21;
+            //when
+            string result = class1.GetString(i);
+            //then
+            Assert.Equal("FizzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_number_multiple_of_3_and_5_and_7()
+        {
+            //given
+            FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
+            int i = 105;
+            //when
+            string result = class1.GetString(i);
+            //then
+            Assert.Equal("FizzBuzzWhizz", result);
         }
     }
 }
