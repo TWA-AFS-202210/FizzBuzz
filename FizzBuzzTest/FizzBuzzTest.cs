@@ -32,6 +32,18 @@ namespace FizzBuzzTest
         }
 
         [Fact]
+        public void Should_return_fizz_when_call_countoff_given_number_contain_three()
+        {
+            //given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            //when
+            var res = fizzBuzz.CountOff(30);
+
+            //then
+            Assert.Equal("Fizz", res);
+        }
+
+        [Fact]
         public void Should_return_buzz_when_call_countoff_given_multiple_of_five()
         {
             //given
@@ -85,7 +97,7 @@ namespace FizzBuzzTest
             //given
             FizzBuzz fizzBuzz = new FizzBuzz();
             //when
-            var res = fizzBuzz.CountOff(35);
+            var res = fizzBuzz.CountOff(175);
 
             //then
             Assert.Equal("BuzzWhizz", res);
