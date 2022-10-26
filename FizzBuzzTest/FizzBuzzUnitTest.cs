@@ -31,7 +31,7 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_number_multiple_of_5()
+        public void Should_return_Buzz_when_number_multiple_of_5()
         {
             //given
             FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
@@ -43,7 +43,7 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_number_multiple_of_7()
+        public void Should_return_Whizz_when_number_multiple_of_7()
         {
             //given
             FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
@@ -55,7 +55,7 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_number_multiple_of_3_and_5()
+        public void Should_return_FizzBuzz_when_number_multiple_of_3_and_5()
         {
             //given
             FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
@@ -67,11 +67,11 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_number_multiple_of_5_and_7()
+        public void Should_return_BuzzWhizz_when_number_multiple_of_5_and_7()
         {
             //given
             FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
-            int i = 35;
+            int i = 70;
             //when
             string result = class1.GetString(i);
             //then
@@ -79,7 +79,7 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_number_multiple_of_3_and_7()
+        public void Should_return_FizzWhizz_when_number_multiple_of_3_and_7()
         {
             //given
             FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
@@ -91,7 +91,7 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_number_multiple_of_3_and_5_and_7()
+        public void Should_return_FizzBuzzWhizz_when_number_multiple_of_3_and_5_and_7()
         {
             //given
             FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
@@ -100,6 +100,18 @@ namespace FizzBuzzTest
             string result = class1.GetString(i);
             //then
             Assert.Equal("FizzBuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_number_contain_3()
+        {
+            //given
+            FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
+            int i = 30;
+            //when
+            string result = class1.GetString(i);
+            //then
+            Assert.Equal("Fizz", result);
         }
     }
 }

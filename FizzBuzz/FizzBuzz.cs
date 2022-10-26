@@ -9,22 +9,30 @@ namespace FizzBuzz
             string result = string.Empty;
             bool flag = false;
 
-            if (number % 3 == 0)
+            if (number.ToString().Contains('3'))
             {
-                result += "Fizz";
+                result = "Fizz";
                 flag = true;
             }
-
-            if (number % 5 == 0)
+            else
             {
-                result += "Buzz";
-                flag = true;
-            }
+                if (number % 3 == 0)
+                {
+                    result += "Fizz";
+                    flag = true;
+                }
 
-            if (number % 7 == 0)
-            {
-                result += "Whizz";
-                flag = true;
+                if (number % 5 == 0)
+                {
+                    result += "Buzz";
+                    flag = true;
+                }
+
+                if (number % 7 == 0)
+                {
+                    result += "Whizz";
+                    flag = true;
+                }
             }
 
             if (!flag)
