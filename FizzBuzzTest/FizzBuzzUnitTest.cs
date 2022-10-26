@@ -29,5 +29,17 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("Fizz", result);
         }
+
+        [Fact]
+        public void Should_return_Fizz_when_number_multiple_of_5()
+        {
+            //given
+            FizzBuzz.FizzBuzz class1 = new FizzBuzz.FizzBuzz();
+            int i = 5;
+            //when
+            string result = class1.GetString(i);
+            //then
+            Assert.Equal("Buzz", result);
+        }
     }
 }
