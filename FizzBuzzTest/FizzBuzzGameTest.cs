@@ -90,6 +90,20 @@ namespace FizzBuzzTest
             Assert.Equal("FizzWhizz", countOffReturnResult);
         }
 
+        [Fact]
+        public void Should_return_BuzzWhizz_When_call_countOff_Given_number_can_divided_by_5_and_7()
+        {
+            //given
+            FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+            int inputNumber = 35;
+
+            //when
+            string countOffReturnResult = fizzBuzzGame.CountOff(inputNumber);
+
+            //then
+            Assert.Equal("BuzzWhizz", countOffReturnResult);
+        }
+
         // feat: implement code logic and test for FizzBuzz rule
     }
 }
