@@ -13,17 +13,21 @@ namespace FizzBuzz
             {
                 return fizz;
             }
-            else if (number % 5 == 0 && number % 3 != 0 && number % 7 != 0)
+            else if (number % 3 != 0 && number % 5 == 0 && number % 7 != 0)
             {
                 return buzz;
             }
-            else if (number % 7 == 0 && number % 3 != 0 && number % 5 != 0)
+            else if (number % 3 != 0 && number % 5 != 0 && number % 7 == 0)
             {
                 return whizz;
             }
             else if (number % 3 == 0 && number % 5 == 0 && number % 7 != 0)
             {
                 return fizz + buzz;
+            }
+            else if (number % 3 == 0 && number % 5 != 0 && number % 7 == 0)
+            {
+                return fizz + whizz;
             }
 
             return number.ToString();
