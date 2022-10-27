@@ -7,7 +7,6 @@ namespace FizzBuzz
         public string GetString(int number)
         {
             string result = string.Empty;
-            bool flag = false;
 
             if (number.ToString().Contains('3'))
             {
@@ -18,23 +17,20 @@ namespace FizzBuzz
                 if (number % 3 == 0)
                 {
                     result += "Fizz";
-                    flag = true;
                 }
 
                 if (number % 5 == 0)
                 {
                     result += "Buzz";
-                    flag = true;
                 }
 
                 if (number % 7 == 0)
                 {
                     result += "Whizz";
-                    flag = true;
                 }
             }
 
-            if (!flag)
+            if (result.Length == 0)
             {
                 result = number.ToString();
             }
