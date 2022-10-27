@@ -11,8 +11,7 @@ namespace FizzBuzz
 
             if (number.ToString().Contains('3'))
             {
-                result = "Fizz";
-                flag = true;
+                return "Fizz";
             }
             else
             {
